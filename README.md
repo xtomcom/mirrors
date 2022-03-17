@@ -1,4 +1,4 @@
-# xTom 源鏡像站（[xTom Mirrors](https://mirror.xtom.com.hk/)）新鏡像及新功能申請
+# xTom 源鏡像站（[xTom Mirrors](https://xtom.com/mirrors/)）新鏡像及新功能申請
 
 * 增加新鏡像或功能
 * 修改鏡像配置
@@ -17,6 +17,8 @@
 - 為什麼希望添加該鏡像
 
 提交 issue 後，您可以召喚小夥伴們通過評論等方式參與該 issue。xTom 會接納關注度比較高的鏡像申請。
+
+*目前仅接受 Germany，Estonia 和 Japan 的镜像请求*
 
 ### 如何投票
 
@@ -59,6 +61,8 @@ Please provide the information below in body as far as possible:
 - Upstream URL
 - Introduction of the project
 - Why you hope us to add a mirror
+
+*Currently we only accept request for our mirror services in Germany, Estonia and Japan.*
 
 ## How to vote
 
