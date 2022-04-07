@@ -18,7 +18,7 @@
 
 提交 issue 後，您可以召喚小夥伴們通過評論等方式參與該 issue。xTom 會接納關注度比較高的鏡像申請。
 
-*目前仅接受 Germany，Estonia 和 Japan 的镜像请求*
+*目前仅接受 Germany 和 Estonia 的镜像请求*
 
 ### 如何投票
 
@@ -62,7 +62,7 @@ Please provide the information below in body as far as possible:
 - Introduction of the project
 - Why you hope us to add a mirror
 
-*Currently we only accept request for our mirror services in Germany, Estonia and Japan.*
+*Currently we only accept requests for our mirror services in Germany and Estonia.*
 
 ## How to vote
 
