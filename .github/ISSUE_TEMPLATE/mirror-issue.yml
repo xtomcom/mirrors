@@ -82,7 +82,7 @@ body:
     attributes:
       label: Network
       description: ISP, ASN, cloud provider, or data center name.
-      placeholder: AS12345 Example ISP
+      placeholder: AS64500
     validations:
       required: false
 
