@@ -55,9 +55,9 @@ xTom is currently the official mirror behind these endpoints:
 
 | Project | Official endpoint | xTom host |
 | --- | --- | --- |
-| Debian Hong Kong | `ftp.hk.debian.org` | `mirrors.xtom.hk` |
-| Ubuntu Hong Kong | `hk.archive.ubuntu.com` | `mirrors.xtom.hk` |
-| Ubuntu Estonia | `ee.archive.ubuntu.com` | `mirrors.xtom.ee` |
+| Debian Hong Kong | `ftp.hk.debian.org/debian` | `mirrors.xtom.hk/debian` |
+| Ubuntu Hong Kong | `hk.archive.ubuntu.com/ubuntu` | `mirrors.xtom.hk/ubuntu` |
+| Ubuntu Estonia | `ee.archive.ubuntu.com/ubuntu` | `mirrors.xtom.ee/ubuntu` |
 
 ### Where is the xTom Mirrors website?
 
