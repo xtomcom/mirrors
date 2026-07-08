@@ -1,0 +1,120 @@
+name: Mirror service issue
+description: Report availability, speed, sync, routing, DNS, TLS, or HTTP issues for an xTom mirror.
+title: "[Mirror issue] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please use this form only for issues with mirror services operated by xTom.
+
+        xTom is not accepting requests for new mirrored repositories right now because mirror server disk space and maintenance time are limited. Issues requesting new repositories, new distros, ISO archives, or unrelated mirror features may be closed.
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue type
+      options:
+        - Service unavailable
+        - Slow download speed
+        - Repository appears out of sync
+        - DNS, TLS, or HTTP error
+        - Routing or peering problem
+        - Other xTom mirror issue
+    validations:
+      required: true
+
+  - type: input
+    id: mirror_host
+    attributes:
+      label: Mirror host
+      description: The xTom mirror hostname you are using.
+      placeholder: mirrors.xtom.hk
+    validations:
+      required: true
+
+  - type: input
+    id: affected_url
+    attributes:
+      label: Affected URL or path
+      description: Include the exact repository, package, ISO, or metadata URL if possible.
+      placeholder: https://mirrors.xtom.hk/ubuntu/
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened?
+      description: Describe the error, speed issue, timeout, sync problem, or other behavior you saw.
+      placeholder: The mirror timed out while fetching InRelease, or downloads stayed below 200 KB/s from this network.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: Tell us what should have happened instead.
+      placeholder: The repository metadata should download normally from this region.
+    validations:
+      required: true
+
+  - type: input
+    id: first_seen
+    attributes:
+      label: First seen
+      description: Include date, time, and timezone.
+      placeholder: 2026-07-08 14:30 UTC
+    validations:
+      required: true
+
+  - type: input
+    id: client_location
+    attributes:
+      label: Client location
+      description: Country, region, or city where you tested from.
+      placeholder: Hong Kong
+    validations:
+      required: true
+
+  - type: input
+    id: network
+    attributes:
+      label: Network
+      description: ISP, ASN, cloud provider, or data center name.
+      placeholder: AS12345 Example ISP
+    validations:
+      required: false
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: Paste useful command output. Remove passwords, tokens, and private account details first.
+      render: shell
+      placeholder: |
+        curl -I https://mirrors.xtom.hk/ubuntu/
+        mtr -rw mirrors.xtom.hk
+        traceroute mirrors.xtom.hk
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra_context
+    attributes:
+      label: Extra context
+      description: Add anything else that may help us trace the issue.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: This issue is about a mirror service operated by xTom.
+          required: true
+        - label: This is not a request to add a new mirrored repository.
+          required: true
+        - label: I removed passwords, tokens, and private account details from the information above.
+          required: true

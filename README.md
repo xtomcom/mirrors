@@ -1,70 +1,70 @@
-# xTom 源鏡像站（[xTom Mirrors](https://xtom.com/mirrors/)）新鏡像及新功能申請
+# xTom Mirrors issue tracker
 
-* 增加新鏡像或功能
-* 修改鏡像配置
-* 報告鏡像站故障
+This repository, `xtom/mirrors`, is for issues with public mirrors operated by xTom.
 
-[點此提交](https://github.com/xtomcom/mirrorrequest/issues/new)
- 
-## 申請新鏡像
+Please open an issue here for problems such as:
 
-標題請使用這樣的格式：*Parabola GNU/Linux-libre 軟件倉庫和ISO鏡像*。全英文也可以。總之，在標題簡要說明一下這個鏡像的內容。
+- an xTom mirror host is unavailable
+- downloads are much slower than expected from a region the mirror is meant to serve
+- repository metadata or packages appear to be out of sync
+- DNS, TLS, routing, or HTTP errors on an xTom mirror
 
-正文中請盡量說明以下內容：
+We are not accepting requests for new mirrored repositories at the moment. The mirror servers do not have enough spare disk space, and our maintenance time is limited. For now, we are using that capacity to keep the current mirrors stable.
 
-- 上游源（官方鏡像）的地址
-- 該項目的介紹
-- 為什麼希望添加該鏡像
+## Before opening an issue
 
-提交 issue 後，您可以召喚小夥伴們通過評論等方式參與該 issue。xTom 會接納關注度比較高的鏡像申請。
+Please include enough detail for us to reproduce or trace the problem:
 
-*目前仅接受 Germany 和 Estonia 的镜像请求*
+- mirror hostname, such as `mirrors.xtom.hk` or `mirrors.xtom.ee`
+- affected path, package, ISO, or repository URL
+- when you first saw the problem, with timezone
+- where you are testing from, including country or region
+- network details, such as ISP, ASN, or data center name
+- what you expected to happen
+- what happened instead
+- command output if relevant, such as `curl -I`, `mtr`, `traceroute`, `wget`, `apt`, `dnf`, `yum`, or `pacman`
 
-### 如何投票
+Please remove passwords, tokens, and private account details from logs before posting.
 
-請在 Github Issue 頁面使用 Emoji :+1: 表情來投票。
-請參考[這裡](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments)的使用說明。
+## Out of scope
 
-## 修改鏡像配置
+Please do not use this repository for:
 
-標題舉例：希望 Rust 源更新後改寫 toml 文件,將鏈接指向本地
+- requests to add new distros, repositories, ISO archives, or mirror features
+- issues with mirrors not operated by xTom
+- upstream package bugs
+- general Linux package manager support
 
-請在正文中補充以下內容：
+Issues outside this scope may be closed so we can keep the tracker focused on mirror operations.
 
-* 需要修改的鏡像名稱
-* 具體的修改內容或方式
-* 修改原因
+## FAQ
 
-## [報告鏡像站故障](https://github.com/xtomcom/xtom-mirrors/issues)
+### Why are new mirror requests closed?
 
-請說明以下內容：
+xTom is not adding extra repositories right now because the mirror servers do not have enough spare disk space. We also have limited maintenance time, so we are focusing on the mirrors we already run.
 
-* 故障鏡像的名稱
-* 首次觀察到故障的時間
-* 故障描述
-* 修復建議（如果有）
+### I cannot access a mirror. Is the service down?
 
-請在[這裡](https://github.com/xtomcom/xtom-mirrors/issuess)提交
+Not always. xTom mirror services are intended for users in the region where each mirror server is hosted. If you are outside that region, connectivity may be limited.
 
-# xTom Open Source Mirrors New Mirror Request
+If the mirror rejects or drops your connection, your source network may have been blocked by our WAF or other security filtering. If you open an issue, please include your source region, ISP or ASN, timestamp, and `mtr` or `traceroute` output.
 
-If you want [xTom mirrors](https://mirror.xtom.com.hk/) to add some new mirror or feature or modify the configration of exist mirror, plsese submit an [**issue**](https://github.com/xtomcom/mirrorrequest/issues) in this repository. We will accept high vote project.
+### Which official distro mirror endpoints point to xTom?
 
-## request format
+xTom is currently the official mirror behind these endpoints:
 
-example:
+| Project | Official endpoint | xTom host |
+| --- | --- | --- |
+| Debian Hong Kong | `ftp.hk.debian.org` | `mirrors.xtom.hk` |
+| Ubuntu Hong Kong | `hk.archive.ubuntu.com` | `mirrors.xtom.hk` |
+| Ubuntu Estonia | `ee.archive.ubuntu.com` | `mirrors.xtom.ee` |
 
-*title*  **Parabola GNU/Linux-libre Software repository and ISO image**
+### Where is the xTom Mirrors website?
 
-Please provide the information below in body as far as possible:
+The xTom Mirrors website is at:
 
-- Upstream URL
-- Introduction of the project
-- Why you hope us to add a mirror
+https://xtom.com/mirrors/
 
-*Currently we only accept requests for our mirror services in Germany and Estonia.*
+## Acknowledgements
 
-## How to vote
-
-Please use emoji reaction on Github Issue.
-Take this page  https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments for reference.
+We thank [USTC LUG](https://lug.ustc.edu.cn/) and [Tsinghua University TUNA Association](https://tuna.moe/) for their help with the maintenance of xTom Mirrors servers.
